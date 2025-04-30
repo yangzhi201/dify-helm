@@ -674,8 +674,8 @@ postgresql:
     postgresql:
       auth:
         postgresPassword: "difyai123456"
-        username: ""
-        password: ""
+        username: "dify"
+        password: "difyai123456"
         database: "dify"
   image:
     registry: docker.io
@@ -684,7 +684,7 @@ postgresql:
     pullPolicy: IfNotPresent
   ## @param architecture PostgreSQL architecture (`standalone` or `replication`)
   ##
-  architecture: replication
+  architecture: standalone
   ## Replication configuration
   ## Ignored if `architecture` is `standalone`
   ##
@@ -1301,7 +1301,7 @@ redis:
 
   ## @param architecture Redis&reg; architecture. Allowed values: `standalone` or `replication`
   ##
-  architecture: replication
+  architecture: standalone
   ## Redis&reg; Authentication parameters
   ## ref: https://github.com/bitnami/containers/tree/main/bitnami/redis#setting-the-server-password-on-first-run
   ##
